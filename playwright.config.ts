@@ -36,7 +36,7 @@ const config: PlaywrightTestConfig = {
         baseURL: testConfig[ENV],
 
         //Browser Mode
-        headless: false,
+        headless: true,
 
         //Browser height and width
         viewport: { width: 1500, height: 730 },
@@ -98,7 +98,7 @@ const config: PlaywrightTestConfig = {
         browserName: `chromium`,
         channel: `msedge`,
         baseURL: testConfig[ENV],
-        headless: false,
+        headless: true,
         viewport: { width: 1500, height: 730 },
         ignoreHTTPSErrors: true,
         acceptDownloads: true,

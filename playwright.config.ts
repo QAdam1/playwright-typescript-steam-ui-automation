@@ -1,6 +1,7 @@
 import { PlaywrightTestConfig, devices } from '@playwright/test';
 import { testConfig } from './testConfig';
-const ENV = process.env.npm_config_ENV;
+// const ENV = process.env.npm_config_ENV;
+const ENV = 'qa';
 
 if (!ENV || ![`qa`, `dev`, `qaApi`, `devApi`].includes(ENV)) {
   console.log(`Please provide a correct environment value after command like "--ENV=qa|dev|qaApi|devApi"`);
@@ -35,7 +36,7 @@ const config: PlaywrightTestConfig = {
         baseURL: testConfig[ENV],
 
         //Browser Mode
-        headless: true,
+        headless: false,
 
         //Browser height and width
         viewport: { width: 1500, height: 730 },
